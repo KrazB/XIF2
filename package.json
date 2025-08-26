@@ -1,0 +1,47 @@
+{
+  "name": "xif2-ifc-converter",
+  "version": "2.0.0",
+  "description": "Universal IFC to Fragments converter with support for any file size through innovative split-and-convert methodology",
+  "main": "frag_convert/convert_ifc_to_fragments.js",
+  "type": "module",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "convert": "cd frag_convert && node convert_ifc_to_fragments.js",
+    "analyze": "cd frag_convert && node diagnose_ifc.cjs",
+    "split": "cd frag_convert && python ifc_splitter.py",
+    "install-deps": "cd frag_convert && npm install && pip install ifcopenshell",
+    "test": "echo \"Use convert_ifc_files.bat for testing\" && exit 0"
+  },
+  "keywords": [
+    "ifc",
+    "fragments",
+    "bim",
+    "converter",
+    "3d",
+    "thatopen",
+    "large-files",
+    "split-convert",
+    "web-ready"
+  ],
+  "author": "KrazB",
+  "license": "MIT",
+  "dependencies": {
+    "@thatopen/components": "^2.4.11",
+    "@thatopen/fragments": "^3.0.7",
+    "web-ifc": "0.0.68"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "python": ">=3.8.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/KrazB/XIF2.git"
+  },
+  "homepage": "https://github.com/KrazB/XIF2",
+  "bugs": {
+    "url": "https://github.com/KrazB/XIF2/issues"
+  }
+}
