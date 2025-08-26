@@ -22,12 +22,20 @@ ENV/
 # Processing outputs and temporary files
 data/fragments/
 data/ifc_split/
+frag_convert/splits/
 temp/
 output/
 logs/
 reports/
 *.frag
 *_preprocessed.ifc
+
+# Large IFC files (exclude from repository)
+# Keep only small demo/test files under 10MB
+data/ifc/*
+!data/ifc/test-minimal.ifc
+!data/ifc/3-0000-112-SBD-30-MD-0001_GDA2020.ifc
+!data/ifc/*.md
 splitting_summary.txt
 
 # Large IFC files (keep structure, ignore large files)
